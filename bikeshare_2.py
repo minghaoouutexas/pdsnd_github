@@ -177,6 +177,7 @@ def user_stats(df):
 
 def user_input(df):
     """ask user whether they want to see raw data"""
+    seerawdata = input('\nWould you see first five lines of raw data? Enter yes or no.\n').lower()
     i = 0
     while seerawdata == 'yes':
         print('\n five lines of raw data is presented as follow\n', df.iloc[i:i+5])
@@ -186,8 +187,7 @@ def user_input(df):
 def main():
     while True:
         city, month, day = get_filters()
-        df = load_data(city, month, day)
-        seerawdata = input('\nWould you see first five lines of raw data? Enter yes or no.\n').lower()
+        df = load_data(city, month, day)     
         user_input(df)
         time_stats(df)
         station_stats(df)
