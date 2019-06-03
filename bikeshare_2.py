@@ -158,6 +158,7 @@ def user_stats(df):
     # Display counts of gender
     # discount the gender
     if 'Gender' in df.columns:
+        #Make sure that Gender in the dataframe
         df['Gender']=df['Gender'].dropna(axis=0,inplace = True)
         gender_type = df['Gender'].value_counts()
         print('\nThe gender type is following\n', gender_type)
