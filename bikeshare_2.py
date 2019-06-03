@@ -165,6 +165,7 @@ def user_stats(df):
     else:
         print('No avaible info can be provided for gender')
     if 'Birth Year' in df.columns:   
+        #Make sure that Birth Year in the dataframe
         # Display earliest, most recent, and most common year of birth
         df['Birth Year']=df['Birth Year'].dropna(axis=0,inplace = True)
         earliest_birth = df['Birth Year'].min()
