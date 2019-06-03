@@ -188,7 +188,7 @@ def main():
         city, month, day = get_filters()
         df = load_data(city, month, day)
         seerawdata = input('\nWould you see first five lines of raw data? Enter yes or no.\n').lower()
-
+        user_input(df)
         time_stats(df)
         station_stats(df)
         trip_duration_stats(df)
